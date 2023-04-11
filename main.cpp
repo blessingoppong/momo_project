@@ -8,6 +8,8 @@ int main()
     int pin = 0000; // default pin
     int attempts = 0; // count of incorrect pin attempts
 
+    int entered_pin;
+
     while(true){
         int option;
 
@@ -54,8 +56,17 @@ int main()
 
 
             case 3:
-                // check balance
-                cout << "Current balance: " << balance << endl;
+
+
+
+                cout << "Enter pin: ";
+                cin >> entered_pin;
+
+                if (entered_pin == pin){
+                    cout << "Current balance: " << balance << endl;
+                }else{
+                    cout << "Incorrect pin" <<endl;
+                }
                 break;
 
             case 4:
@@ -63,9 +74,15 @@ int main()
                 int recipient_number;
                 int amount;
 
+                cout << "Enter pin: ";
+                cin >> entered_pin;
+
+
+                if (entered_pin == pin){
                 cout << "Enter recipient phone number: ";
                 cin >> recipient_number;
                 cout << "Enter amount to send: ";
+
                 cin >> amount;
 
                 if (amount <= balance) {
@@ -73,6 +90,9 @@ int main()
                     cout << "Transaction successful" << endl;
                 } else {
                     cout << "Insufficient balance" << endl;
+                }
+                }else{
+                    cout << "Incorrect pin" <<endl;
                 }
                 break;
 
