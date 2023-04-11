@@ -8,7 +8,7 @@ int main()
     int pin = 0000; // default pin
     int attempts = 0; // count of incorrect pin attempts
 
-    int entered_pin;
+    int entered_pin; // holds the user's entered pin
 
     while(true){
         int option;
